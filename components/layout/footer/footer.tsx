@@ -40,14 +40,11 @@ export function Footer() {
       <div className="flex items-center gap-4">
         <Link href="/" className="flex items-center gap-2">
           <Logo size={18} />
-          <p>
-            Codez<span className="font-medium">Aura</span>
-          </p>
         </Link>
 
         <div className="h-4 w-0.5 rounded-full bg-accent-foreground"></div>
 
-        <p className="text-sm">{currentYear} &copy; copyrights reserved</p>
+        <p className="mt-0 text-sm">{currentYear} &copy; copyrights reserved</p>
       </div>
 
       <SocialLinks links={socialConfig.links} />
