@@ -1,12 +1,11 @@
-import { GettingStartedView } from "@/sections/docs/getting-started/view"
 import type { Metadata } from "next"
 
 // -----------------------------------------------------------------------
 
-export const metadata: Metadata = { title: "Getting started" }
+export const metadata: Metadata = { title: "Fundamentals" }
 
 // -----------------------------------------------------------------------
 
 export default function Page() {
-  return <GettingStartedView />
+  return <></>
 }

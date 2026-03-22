@@ -14,7 +14,7 @@ export function DocsView() {
 
   return (
     <>
-      <div>
+      <div className="flex-1">
         <h1 className="font-medium">Introduction</h1>
         <p>
           Our ultimate documentary for mastering web development and much more!
