@@ -62,7 +62,7 @@ export function InternalSidebar({
                         className="group/collapsible"
                         defaultOpen={isActive}
                       >
-                        <CollapsibleTrigger>
+                        <CollapsibleTrigger asChild>
                           <SidebarMenuButton tooltip={item.title}>
                             {Icon && <Icon className="size-4" />}
                             <span className="font-medium">{item.title}</span>
@@ -75,6 +75,7 @@ export function InternalSidebar({
                             {item.children.map((subItem) => (
                               <SidebarMenuSubItem key={subItem.title}>
                                 <SidebarMenuSubButton
+                                  asChild
                                   isActive={pathname === subItem.url}
                                 >
                                   <Link href={subItem.url} className="w-full">

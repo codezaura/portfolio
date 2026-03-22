@@ -1,9 +1,9 @@
 import Link from "next/link"
 
-import { NavBar } from "./navbar"
 import { Logo } from "@/components/logo"
-import { navConfig } from "./config-nav"
 import { ThemeSwitcher } from "@/components/theme"
+import { navConfig } from "./config-nav"
+import { NavBar } from "./navbar"
 
 // -----------------------------------------------------------------------
 
