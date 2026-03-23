@@ -1,14 +1,11 @@
 "use client"
 
-import { paths } from "@/routes/paths"
-
-import {
-  Navigator,
-  InternalNavigation,
-} from "@/components/layout/internal/navigation"
-import { useInternalNavigations } from "@/components/layout/internal/navigation/use-internal-navigations"
 import Image from "next/image"
+import { paths } from "@/routes/paths"
 import { CONFIG } from "@/config-global"
+
+import { DocsOutlet as Outlet } from "../docs-outlet"
+import { useInternalNavigations } from "@/components/layout/internal/navigation/use-internal-navigations"
 
 // -----------------------------------------------------------------------
 
@@ -16,39 +13,36 @@ export function GettingStartedView() {
   const internalNavigations = useInternalNavigations()
 
   return (
-    <>
-      <div className="flex-1">
-        <h1 className="font-medium">Getting started</h1>
-
-        <p>
+    <Outlet
+      internalNavigations={internalNavigations}
+      navigatorProps={{
+        previous: { title: "Welcome", href: paths.docs.root },
+        next: { title: "Fundamentals", href: paths.docs.fundamentals },
+      }}
+    >
+      <h1 className="font-medium">Getting started</h1>
+      <p>
+        <span className="font-medium">
           Let&apos;s unfold the programming and development realm!
-          <br />
-          Here is everything! Whatever you need to build your first project,
-          from <code>JavaScript</code> & <code>React</code> to{" "}
-          <code>Node.js</code>, <code>Git</code>, <code>GitHub</code>,{" "}
-          <code>Next.js</code> and beyond.
-        </p>
+        </span>
+        <br />
+        Here is everything! Whatever you need to build your first project, from{" "}
+        <code>JavaScript</code> & <code>React</code> to <code>Node.js</code>,{" "}
+        <code>Git</code>, <code>GitHub</code>, <code>Next.js</code> and beyond.
+      </p>
 
-        <div className="mt-8 flex flex-wrap gap-6">
-          {techStack.map((icon) => (
-            <Image
-              key={icon}
-              alt={icon}
-              src={`${CONFIG.site.baseUrl}/assets/icons/skill/${icon}.svg`}
-              width={60}
-              height={60}
-            />
-          ))}
-        </div>
-
-        <Navigator>
-          <Navigator.Previous title="Welcome" href={paths.docs.root} />
-          <Navigator.Next title="Fundamentals" href={paths.docs.fundamentals} />
-        </Navigator>
+      <div className="mt-8 flex flex-wrap gap-6">
+        {techStack.map((icon) => (
+          <Image
+            key={icon}
+            alt={icon}
+            src={`${CONFIG.site.baseUrl}/assets/icons/skill/${icon}.svg`}
+            width={60}
+            height={60}
+          />
+        ))}
       </div>
-
-      <InternalNavigation internalNavigations={internalNavigations} />
-    </>
+    </Outlet>
   )
 }
 

@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 // -----------------------------------------------------------------------
 
-interface NavigatorProps {
+export interface NavigatorProps {
   href: string
   title: string | React.ReactNode
 }

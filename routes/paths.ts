@@ -12,6 +12,7 @@ export const paths = {
     root: `${DOCS_ROOT}`,
     gettingStarted: `${DOCS_ROOT}/getting-started`,
     fundamentals: `${DOCS_ROOT}/fundamentals`,
+    vscode: `${DOCS_ROOT}/core/vscode`,
     preKnowledge: `${DOCS_ROOT}/pre-knowledge`,
   },
 }
