@@ -57,17 +57,17 @@ export function InternalNavigation({
                 <a
                   href={item.path}
                   className={cn(
-                    "block pl-4 text-sm transition-colors hover:text-rose-500",
+                    "block pl-4 text-sm transition-colors hover:text-cyan-500",
                     // Apply indentation if it's a sub-item (H3)
                     // item.level === 2 ? "ml-4" : "",
                     isActive
-                      ? "font-medium text-rose-600 dark:text-rose-400"
+                      ? "font-medium text-cyan-600 dark:text-cyan-400"
                       : "text-zinc-500 dark:text-zinc-400"
                   )}
                 >
                   {/* Vertical bar for the active link */}
                   {isActive && (
-                    <span className="absolute top-0 -left-px h-full w-0.5 rounded-xl bg-rose-600 dark:bg-rose-400" />
+                    <span className="absolute top-0 -left-px h-full w-0.5 rounded-xl bg-cyan-600 dark:bg-cyan-400" />
                   )}
                   {item.title}
                 </a>
