@@ -37,6 +37,8 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --shiki-foreground: #24292e;
+  --shiki-background: #fff;
 }
 
 .dark {
@@ -71,6 +73,8 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+  --shiki-foreground: #e1e4e8;
+  --shiki-background: #24292e;
 }
 
 @theme inline {
@@ -155,5 +159,11 @@
   }
   small {
     @apply text-sm leading-none font-medium;
+  }
+  pre > code {
+    @apply static rounded-none bg-transparent px-0 py-0;
+  }
+  pre.shiki {
+    @apply my-4 rounded-sm px-2 py-2;
   }
 }
